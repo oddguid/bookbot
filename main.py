@@ -57,9 +57,7 @@ def create_report(book_path, word_count, sorted_count):
     """Footer"""
     report += "--- End report ---"
     
-
     return report
-
 
 def main() -> int:
     book_path = "books/frankenstein.txt"
@@ -83,7 +81,6 @@ def main() -> int:
     report = create_report(book_path, word_count, filtered_character_count)
 
     print(report)
-
 
 if __name__ == '__main__':
     sys.exit(main())
