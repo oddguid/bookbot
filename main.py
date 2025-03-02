@@ -1,5 +1,6 @@
 import sys
 from collections import Counter
+from stats import get_num_words
 
 def get_book_text(path):
     """Read contents"""
@@ -7,13 +8,6 @@ def get_book_text(path):
         file_contents = f.read()
 
     return file_contents
-
-def get_word_count(text):
-    """Split text into words"""
-    words = text.split()
-
-    """Length is word count"""
-    return len(words)
 
 def get_character_count(text):
     """Convert to lower case"""
@@ -66,7 +60,7 @@ def main() -> int:
     book_text = get_book_text(book_path)
 
     """Count words"""
-    word_count = get_word_count(book_text)
+    word_count = get_num_words(book_text)
 
     """Count characters"""
     character_count = get_character_count(book_text)
